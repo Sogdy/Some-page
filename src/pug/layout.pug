@@ -1,0 +1,93 @@
+include templates/mixins
+
+doctype
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        block title
+            title Company name
+        meta(name="description" content="Company's slogan")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+
+        // CSS
+
+        // Fonts
+        link(rel="stylesheet" href="css/font-awesome.min.css")
+
+        // Owl-carousel
+        link(rel="stylesheet" type="text/css" href="css/owl.carousel.css")
+        link(rel="stylesheet" type="text/css" href="css/owl.theme.css")
+        link(rel="stylesheet" type="text/css" href="css/owl.transitions.css")
+
+        // Site Styles
+        link(rel="stylesheet" href="css/styles.css")
+
+    body
+        // Header block begin
+        header(class='header' id="header")
+            .header__wrap
+                //Header top begin
+                .header__top
+                    .container.header__top_wrap
+                        .header__left
+                            ul.lang
+                                li
+                                    a(href="/ru/") RU
+                                li
+                                    a(href="/ukr/") UKR
+
+                        .header__center
+                            .header__call
+                                .header__call_select
+                                    select
+                                        option (044)000-00-00
+                                        option (063)000-00-00
+                                        option (050)000-00-00
+                                        option (067)000-00-00
+                                a(href="#") заказать звонок
+                            .header__socials
+                                include templates/socials
+                            .header__search
+                                form(class="header_search__wrap")
+                                    button.header__search-button
+                                        i(class="fa fa-search" aria-hidden="true")
+                                    input(type="text" placeholder="Что будем искать?")
+                        .header__right.login
+                            a(href="#") Вход
+                            a(href="#") Регистрация
+                // Header top end
+                // Header middle begin
+                .header__middle.container
+                    .header__left
+                        h1.header_logo
+                            img(src="images/logo.jpg" alt="Company's logo")
+                    .header__center
+                        include templates/company-nav
+                    .header__right
+                        .header__cart 
+                            p
+                                span.bold 2 
+                                | товара, на сумму 
+                                span.bold  1500 грн.
+                            a(href="#") оформить заказ
+                //Header middle end
+                //Header bottom begin
+                .header__bottom
+                    .container
+                        include templates/nav
+                //Header bottom end
+            .header__hamb-button
+            h1.header__logo_mobile
+                img(src="images/logo.jpg" alt="Company's logo")
+            .header__cart_mobile
+                p.header__cart_items 3
+        // Header block end
+
+        main
+            block content
+
+        footer.footer
+            
+
+
+        block jsIncludes

@@ -1,0 +1,68 @@
+// Default carousel-slider block begin
+.slider{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  .slider__list-wrap {
+    height: 500px;
+    overflow: hidden;
+  }
+  .slider__list{
+    display: table;
+    clear: both;
+    position: relative;
+    transition: all .3s;
+    left: 0;
+  }
+
+  .item{
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .preview {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    img {
+      width: 200px;
+      height: 100px;
+    }
+  }
+
+  .slider__controls-button{
+    position: absolute;
+  }
+  .button__next {
+    cursor: pointer;
+    right: 0;
+  }
+  .button__prev {
+    cursor: pointer;
+    left: 0;
+  }
+  .pagination {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    .dot{
+      display: inline-block;
+      width: 16px;
+      height:16px;
+      background: #666666;
+      cursor: pointer;
+      border-radius: 16px;
+      margin: 0 20px;
+      border: 1px solid #666666;
+    }
+    .active{
+      background: #fff;
+    }
+  }
+}
+// Default carousel-slider block end
